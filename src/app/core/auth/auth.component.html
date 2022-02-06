@@ -1,0 +1,71 @@
+<div class="fondoLogin">
+    <div style=" height: 100%; padding: 1%;" >
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center t">
+                <div class="col d-none d-lg-block col-md-4 col-lg-5 col-xl-6">
+                    <div class=""></div>
+                </div>
+                <div class="col color p-6">
+                    <nz-tabset>
+                        <nz-tab nzTitle="Ingreso">
+                            <form autocomplete="off" [formGroup]="FormsLogin">
+                                <img src="../../../assets/img/Login.jpg" width="50%" alt="">
+                            <div class="col-sm-12">
+                                <mat-form-field appearance="outline" class="inp" >
+                                    <mat-label>Correo</mat-label>
+                                    <input matInput placeholder="Correo" formControlName="correo">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-12">
+                                <mat-form-field appearance="outline" class="inp" >
+                                    <mat-label>Contraseña</mat-label>
+                                    <input matInput type="password" placeholder="Contraseña" formControlName="password">
+                                </mat-form-field>
+                            </div>
+                            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                                <button class="btn btn-outline-primary" (click)="logarte()" type="button" [disabled]="FormsLogin.invalid">Ingresar</button>
+                            </div>
+                            <div style="text-align: left" class="mt-4">
+                                <a>¿Haz olvidado tu contraseña?</a>
+                            </div>
+                            </form>
+                        </nz-tab>
+
+                        <nz-tab nzTitle="Registrar">
+                            <form autocomplete="off" [formGroup]="FormsRegis">
+                                <div class="col-sm-12">
+                                    <mat-form-field appearance="outline" class="inp" >
+                                        <mat-label>Nombre</mat-label>
+                                        <input matInput placeholder="Nombre" formControlName="nombre">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-sm-12">
+                                    <mat-form-field appearance="outline" class="inp" >
+                                        <mat-label>Correo</mat-label>
+                                        <input matInput placeholder="Correo" formControlName="correo">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-sm-12">
+                                    <mat-form-field appearance="outline" class="inp" >
+                                        <mat-label>Contraseña</mat-label>
+                                        <input matInput type="password" placeholder="Contraseña" formControlName="password">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-sm-12">
+                                    <mat-form-field appearance="outline" class="inp" >
+                                        <mat-label>Repetir contraseña</mat-label>
+                                        <input matInput type="password" placeholder="Repetir Contraseña" formControlName="confirmpass">
+                                    </mat-form-field>
+                                </div>
+    
+                                <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                                    <button class="btn btn-outline-primary" (click)="registar()"  type="button">Registrar</button>
+                                </div>
+                            </form>
+                        </nz-tab>
+                    </nz-tabset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
