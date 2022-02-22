@@ -64,7 +64,7 @@ export class AuthComponent implements OnInit {
         localStorage.setItem('token', token)
         let datos = JSON.stringify(resp.datos.perfil)
         localStorage.setItem('usuario', datos);
-        this.router.navigate(['perfil']);
+        this.router.navigate(['inicio']);
       }else{
         this.openSnackBar(resp.mensaje)
       }
